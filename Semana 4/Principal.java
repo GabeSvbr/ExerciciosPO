@@ -7,9 +7,8 @@ public class Principal {
         int opcao = -1;
 
         while (opcao != 0) {
-            System.out.println("\n==============================");
-            System.out.println("       CONTA BANCARIA");
-            System.out.println("==============================");
+            System.out.println("       BANCO MASTER");
+            System.out.println(" ");
             System.out.println("1 - Criar conta");
             System.out.println("2 - Sacar");
             System.out.println("3 - Depositar");
@@ -19,16 +18,15 @@ public class Principal {
             System.out.println("7 - Aplicar rendimento");
             System.out.println("8 - Listar contas");
             System.out.println("0 - Sair");
-            System.out.println("==============================");
 
             try {
-                System.out.print("Escolha uma opção: ");
+                System.out.print("Opção: ");
                 opcao = scanner.nextInt();
                 scanner.nextLine();
 
                 switch (opcao) {
                     case 1:
-                        System.out.println("\n--- CRIAR CONTA ---");
+                        System.out.println("\nCRIAR CONTA");
 
                         System.out.print("Nome: ");
                         String nome = scanner.nextLine();
@@ -45,12 +43,12 @@ public class Principal {
 
                         int numero = banco.criarConta(nome, cpf, data, saldoInicial);
 
-                        System.out.println("Conta criada com sucesso!");
+                        System.out.println("Conta criada!");
                         System.out.println("Número da conta: " + numero);
                         break;
 
                     case 2:
-                        System.out.println("\n--- SACAR ---");
+                        System.out.println("\nSACAR");
 
                         System.out.print("Número da conta: ");
                         int contaSaque = scanner.nextInt();
@@ -63,7 +61,7 @@ public class Principal {
                         break;
 
                     case 3:
-                        System.out.println("\n--- DEPOSITAR ---");
+                        System.out.println("\nDEPOSITAR");
 
                         System.out.print("Número da conta: ");
                         int contaDeposito = scanner.nextInt();
@@ -76,7 +74,7 @@ public class Principal {
                         break;
 
                     case 4:
-                        System.out.println("\n--- TRANSFERÊNCIA ---");
+                        System.out.println("\nTRANSFERÊNCIA");
 
                         System.out.print("Conta de origem: ");
                         int origem = scanner.nextInt();
@@ -92,7 +90,7 @@ public class Principal {
                         break;
 
                     case 5:
-                        System.out.println("\n--- CONSULTAR SALDO ---");
+                        System.out.println("\nCONSULTAR SALDO");
 
                         System.out.print("Número da conta: ");
                         int contaSaldo = scanner.nextInt();
@@ -129,14 +127,13 @@ public class Principal {
                         break;
 
                     case 0:
-                        System.out.println("Programa encerrado.");
                         break;
 
                     default:
-                        System.out.println("Opção inválida.");
+                        System.out.println("opc invalida");
                 }
             } catch (Exception e) {
-                System.out.println("Entrada inválida. Tente novamente.");
+                System.out.println("input inválido");
                 scanner.nextLine();
             }
         }
